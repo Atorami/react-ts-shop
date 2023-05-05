@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 
 import { ChevronDownIcon } from '../../assets/icons/ArrowDown';
-import { ChevronUpIcon } from '../../assets/icons/ArrowUp';
 
 enum Languages {
   eng = 'ENG',
@@ -27,28 +26,28 @@ export const Language = () => {
   };
 
   return (
-    <div className="dropdown ml-4 cursor-pointer relative">
+    <div className="dropdown mx-4 cursor-pointer relative transition duration-200 w-10">
       <div
         className="dropdown__current-language flex flex-row items-center"
         onClick={clickHandler}
       >
-        <div className="">{selectLanguage}</div>
-        <div className="dropdown__icon">
+        <div className="px-4">{selectLanguage}</div>
+        <div className="dropdown__icon transition  ease-in-out duration-200">
           {!isOpen ? (
-            <ChevronDownIcon className="h-4 ml-2" />
+            <ChevronDownIcon className="h-4 transition  ease-in-out duration-600" />
           ) : (
-            <ChevronUpIcon className="h-4 ml-2" />
+            <ChevronDownIcon className="h-4 transition  ease-in-out duration-600 rotate-180" />
           )}
         </div>
       </div>
       <div
-        className={`dropdown__lang-list absolute top-8 ${
-          isOpen ? '' : 'hidden'
+        className={`dropdown__lang-list absolute top-8 left-0 text-center transition duration-400 w-16 border-gray-50 rounded-lg bg-white shadow-xs  ${
+          isOpen ? 'opasity-300 ' : 'opacity-0'
         }`}
       >
         {Object.values(Languages).map((val) => (
           <div
-            className="lang-list__item"
+            className="lang-list__item hover:bg-red-100 w-full px-3 rounded-lg"
             data-value={val}
             onClick={langHandler}
           >
