@@ -4,6 +4,9 @@ import { Navigation } from './Navigation/Navigation';
 import { HeartIcon } from '../assets/icons/Heart';
 import { Language } from './Language/Language';
 import { ThemeToggle } from './ThemeToggle/ThemeToggle';
+import { Cart } from './Cart/Cart';
+import { Profile } from './Profile/Profile';
+import { Favorite } from './Favorite/Favorite';
 
 export const Header: FC = () => {
   return (
@@ -16,12 +19,11 @@ export const Header: FC = () => {
           Hekto
         </Link>
         <Navigation />
-        <HeartIcon
-          className="w-[30px] h-[30px] cursor-pointer hover:fill-red-300 hover:stroke-amber-400 
-transition-all duration-300"
-        />
         <Language />
         <ThemeToggle />
+        <Profile />
+        <Favorite />
+        <Cart />
       </div>
     </header>
   );

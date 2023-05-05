@@ -47,7 +47,7 @@ export const Language = () => {
       >
         {Object.values(Languages).map((val) => (
           <div
-            className="lang-list__item hover:bg-red-100 w-full px-3 rounded-lg"
+            className="lang-list__item hover:bg-red-100 w-full px-3 py-2 rounded-lg"
             data-value={val}
             onClick={langHandler}
           >
