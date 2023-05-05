@@ -67,11 +67,11 @@ export default function MainPage() {
       </section>
 
       <section className="best-products h-[600px] pt-20 mb-5">
-        <div className="container mx-auto">
+        <div className="container mx-auto flex flex-col items-center">
           <h2 className="best-products__title text-center text-4xl font-josefin font-semibold">
             Best products
           </h2>
-          <div className="best-products__list mt-12 grid grid-cols-4 grid-rows-1 content-center">
+          <div className="best-products__list mt-12 grid grid-cols-4 grid-rows-1 gap-20 content-center">
             {products.map((product) => (
               <ProductCard
                 img_path={product.img_path}
