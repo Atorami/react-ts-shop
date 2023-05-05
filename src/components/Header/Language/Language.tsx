@@ -26,22 +26,22 @@ export const Language = () => {
   };
 
   return (
-    <div className="dropdown mx-4 cursor-pointer relative transition duration-200 w-10">
+    <div className="dropdown mx-4 cursor-pointer relative w-10">
       <div
         className="dropdown__current-language flex flex-row items-center"
         onClick={clickHandler}
       >
         <div className="px-4">{selectLanguage}</div>
-        <div className="dropdown__icon transition  ease-in-out duration-200">
+        <div className="dropdown__icon ">
           {!isOpen ? (
-            <ChevronDownIcon className="h-4 transition  ease-in-out duration-600" />
+            <ChevronDownIcon className="h-4 transition ease-in-out duration-800" />
           ) : (
-            <ChevronDownIcon className="h-4 transition  ease-in-out duration-600 rotate-180" />
+            <ChevronDownIcon className="h-4 transition ease-in-out duration-800 rotate-180" />
           )}
         </div>
       </div>
       <div
-        className={`dropdown__lang-list absolute top-8 left-0 text-center transition duration-400 w-16 border-gray-50 rounded-lg bg-white shadow-xs  ${
+        className={`dropdown__lang-list absolute top-8 left-0 text-center transition-transform duration-1000 border-gray-50 rounded-lg bg-white shadow-xs  ${
           isOpen ? 'opasity-300 ' : 'opacity-0'
         }`}
       >

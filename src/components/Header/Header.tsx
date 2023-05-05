@@ -11,7 +11,7 @@ import { Favorite } from './Favorite/Favorite';
 export const Header: FC = () => {
   return (
     <header className="h-20	bg-white">
-      <div className="container mx-auto h-full flex items-center px-94 py-5 ">
+      <div className="container mx-auto h-full flex items-center py-5 ">
         <Link
           to="/"
           className="header__logo font-josefin text-[34px] font-bold"
