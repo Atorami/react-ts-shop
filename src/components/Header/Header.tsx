@@ -11,7 +11,7 @@ import { Favorite } from './Favorite/Favorite';
 export const Header: FC = () => {
   return (
     <header className="h-20	bg-white">
-      <div className="container mx-auto h-full flex items-center py-5 ">
+      <div className="container mx-auto h-full flex items-center justify-between py-5 ">
         <Link
           to="/"
           className="header__logo font-josefin text-[34px] font-bold"
@@ -19,11 +19,15 @@ export const Header: FC = () => {
           Hekto
         </Link>
         <Navigation />
-        <Language />
-        <ThemeToggle />
-        <Profile />
-        <Favorite />
-        <Cart />
+        <div className="header__utility flex flex-row items-center">
+          <Language />
+          <ThemeToggle />
+        </div>
+        <div className="header__profile-activity flex flex-row  items-center">
+          <Profile />
+          <Favorite />
+          <Cart />
+        </div>
       </div>
     </header>
   );

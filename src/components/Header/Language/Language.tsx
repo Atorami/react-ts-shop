@@ -26,7 +26,7 @@ export const Language = () => {
   };
 
   return (
-    <div className="dropdown mx-4 cursor-pointer relative w-10">
+    <div className="dropdown mx-6 cursor-pointer relative w-10">
       <div
         className="dropdown__current-language flex flex-row items-center"
         onClick={clickHandler}
@@ -34,15 +34,15 @@ export const Language = () => {
         <div className="px-4">{selectLanguage}</div>
         <div className="dropdown__icon ">
           {!isOpen ? (
-            <ChevronDownIcon className="h-4 transition ease-in-out duration-800" />
+            <ChevronDownIcon className="h-4 transition ease-in-out duration-1000 transform rotate-0" />
           ) : (
-            <ChevronDownIcon className="h-4 transition ease-in-out duration-800 rotate-180" />
+            <ChevronDownIcon className="h-4 transition ease-in-out duration-1000 transform rotate-180" />
           )}
         </div>
       </div>
       <div
-        className={`dropdown__lang-list absolute top-8 left-0 text-center transition-transform duration-1000 border-gray-50 rounded-lg bg-white shadow-xs  ${
-          isOpen ? 'opasity-300 ' : 'opacity-0'
+        className={`dropdown__lang-list absolute top-8 left-0 text-center transition-all duration-700 border-gray-50 rounded-lg bg-white shadow-xs z-10 max-h-0 overflow-hidden ${
+          isOpen ? 'max-h-20 opacity-100' : 'opacity-0'
         }`}
       >
         {Object.values(Languages).map((val) => (
