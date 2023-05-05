@@ -2,9 +2,9 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    container: {
-      padding: '2rem',
-    },
+    // container: {
+    //   padding: '15rem',
+    // },
     extend: {
       fontFamily: {
         josefin: ['Josefin Regular', 'sans-serif'],

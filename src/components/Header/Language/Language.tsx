@@ -41,7 +41,7 @@ export const Language = () => {
         </div>
       </div>
       <div
-        className={`dropdown__lang-list absolute top-8 left-0 text-center transition-all duration-700 border-gray-50 rounded-lg bg-white shadow-xs z-10 max-h-0 overflow-hidden ${
+        className={`dropdown__lang-list absolute top-8 left-1 text-center transition-all duration-700 border-gray-50 rounded-lg bg-white shadow-xs z-10 max-h-0 overflow-hidden ${
           isOpen ? 'max-h-20 opacity-100' : 'opacity-0'
         }`}
       >
