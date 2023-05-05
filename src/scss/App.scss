@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(./_colors.scss);
+@import url(./_fonts.scss);
+
+@layer base {
+  html {
+    font-family: Lato Regular, sans-serif;
+  }
+}
+
+// .app {
+//   font-family: 'Lato Regular';
+// }
