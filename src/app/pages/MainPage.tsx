@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import chair from '../../components/assets/img/promo_chair.png';
+import lamp from '../../components/assets/img/promo_lamp.png';
+
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 
 const products = [
@@ -35,9 +37,28 @@ const products = [
 ];
 
 export default function MainPage() {
+  // const [productList, setProductList] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       console.log('Fetching data');
+  //       const response = await fetch('http://localhost:3000/products');
+  //       const jsonData = await response.json();
+  //       setProductList(jsonData);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
+  // console.log(productList);
+
   return (
     <>
-      <section className="promo bg-f_sky_blue h-[764px]">
+      <section className="promo bg-f_sky_blue h-[764px] relative">
         <div className="container mx-auto flex flex-row">
           <div className="promo__info">
             <p className="pormo__info__subtitle pt-[203px] text-f_pink">
@@ -64,6 +85,7 @@ export default function MainPage() {
             </div> */}
           </div>
         </div>
+        <img src={lamp} alt="" className="promo-lamp absolute top-0" />
       </section>
 
       <section className="best-products h-[600px] pt-20 mb-5">
