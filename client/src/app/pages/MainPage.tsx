@@ -5,56 +5,32 @@ import lamp from '../../components/assets/img/promo_lamp.png';
 
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 
-const products = [
-  {
-    img_path:
-      'https://secure.img1-cg.wfcdn.com/im/10532986/compr-r85/1948/194854595/ziaa-upholstered-armchair.jpg',
-    title: 'Sky Chair',
-    descr: 'Theres some product info',
-    price: 20,
-  },
-  {
-    img_path:
-      'https://secure.img1-cg.wfcdn.com/im/10532986/compr-r85/1948/194854595/ziaa-upholstered-armchair.jpg',
-    title: 'Sky Chair',
-    descr: 'Theres some product info',
-    price: 20,
-  },
-  {
-    img_path:
-      'https://secure.img1-cg.wfcdn.com/im/10532986/compr-r85/1948/194854595/ziaa-upholstered-armchair.jpg',
-    title: 'Sky Chair',
-    descr: 'Theres some product info',
-    price: 20,
-  },
-  {
-    img_path:
-      'https://secure.img1-cg.wfcdn.com/im/10532986/compr-r85/1948/194854595/ziaa-upholstered-armchair.jpg',
-    title: 'Sky Chair',
-    descr: 'Theres some product info',
-    price: 20,
-  },
-];
+interface Products {
+  _id: string;
+  id: number;
+  path_img: string;
+  title: string;
+  descr: string;
+  price: number;
+}
 
 export default function MainPage() {
-  // const [productList, setProductList] = useState([]);
+  const [productList, setProductList] = useState<Products[]>([]);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       console.log('Fetching data');
-  //       const response = await fetch('http://localhost:3000/products');
-  //       const jsonData = await response.json();
-  //       setProductList(jsonData);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        console.log('Fetching data');
+        const response = await fetch('http://localhost:3000/products');
+        const jsonData = await response.json();
+        setProductList(jsonData);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-  //   fetchData();
-  // }, []);
-
-  // console.log(productList);
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -80,9 +56,6 @@ export default function MainPage() {
           </div>
           <div className="promo__img relative mr-[32px]">
             <img src={chair} alt="" className="promo__img__main  py-[99px]" />
-            {/* <div className="promo__img__disk absolute h-[136px] w-[136px] bg-cyan-500 rounded-full text-center top-0 left-0 text-white self-center">
-              50%
-            </div> */}
           </div>
         </div>
         <img src={lamp} alt="" className="promo-lamp absolute top-0" />
@@ -94,9 +67,9 @@ export default function MainPage() {
             Best products
           </h2>
           <div className="best-products__list mt-12 grid grid-cols-4 grid-rows-1 gap-20 content-center">
-            {products.map((product) => (
+            {productList.map((product) => (
               <ProductCard
-                img_path={product.img_path}
+                img_path={product.path_img}
                 title={product.title}
                 descr={product.descr}
                 price={product.price}
