@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 
 import { ChevronDownIcon } from '../../assets/icons/ArrowDown';
@@ -11,6 +11,25 @@ enum Languages {
 export const Language = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectLanguage, setSelectLanguage] = useState(Languages.eng);
+
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   const clickHandler = () => {
     setIsOpen(!isOpen);
@@ -26,7 +45,10 @@ export const Language = () => {
   };
 
   return (
-    <div className="dropdown mx-6 cursor-pointer relative w-10">
+    <div
+      className="dropdown mx-6 cursor-pointer relative w-10"
+      ref={dropdownRef}
+    >
       <div
         className="dropdown__current-language flex flex-row items-center"
         onClick={clickHandler}
