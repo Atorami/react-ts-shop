@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useState } from 'react';
 
 import { ChevronDownIcon } from '../../assets/icons/ArrowDown';
@@ -9,8 +9,23 @@ enum Languages {
 }
 
 export const Language = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectLanguage, setSelectLanguage] = useState(Languages.eng);
+
+  const dropdown__lang = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const closeLangDropdown = (e: MouseEvent) => {
+      if (
+        dropdown__lang.current &&
+        isOpen &&
+        !dropdown__lang.current.contains(e.target as HTMLElement)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', closeLangDropdown);
+  }, []);
 
   const clickHandler = () => {
     setIsOpen(!isOpen);
@@ -41,6 +56,7 @@ export const Language = () => {
         </div>
       </div>
       <div
+        ref={dropdown__lang}
         className={`dropdown__lang-list absolute top-8 left-1 text-center transition-all duration-700 border-gray-50 rounded-lg bg-white shadow-xs z-10 max-h-0 overflow-hidden ${
           isOpen ? 'max-h-20 opacity-100' : 'opacity-0'
         }`}
