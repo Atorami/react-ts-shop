@@ -1,13 +1,12 @@
 const User = require("../models/User");
 const Role = require("../models/Role");
+const { json } = require("express");
 
 class authContorller {
   async getUsers(req, res) {
     try {
-      const userRole = new Role();
-      const adminRole = new Role({ value: "admin" });
-      await userRole.save();
-      await adminRole.save();
+      const users = await User.find();
+      res.json(users);
     } catch (error) {}
   }
 
@@ -25,12 +24,16 @@ class authContorller {
 
         return res.json({ message: "Пользователь зарегистрирован" });
       }
-    } catch (error) {}
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
   }
 
   async login(req, res) {
     try {
-    } catch (error) {}
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
   }
 }
 
