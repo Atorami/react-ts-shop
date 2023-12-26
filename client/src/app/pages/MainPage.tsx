@@ -4,6 +4,7 @@ import chair from '../../components/assets/img/promo_chair.png';
 import lamp from '../../components/assets/img/promo_lamp.png';
 
 import { ProductCard } from '../../components/ProductCard/ProductCard';
+import {BlogCard} from "../../components/Header/BlogCard/BlogCard";
 
 interface Products {
   _id: string;
@@ -97,7 +98,16 @@ export default function MainPage() {
       <section className="top-categories"></section>
       <section className="newslater-subscribe"></section>
       <section className="parthners"></section>
-      <section className="latest-blog"></section>
+      <section className="latest-blog h-[800px]">
+        <div className="container mx-auto">
+          <h2 className="latest-blog__title text-center text-4xl font-josefin font-semibold">Latest Blog</h2>
+          <div className="latest-blog__cards flex flex-row justify-between px-36 py-20">
+            <BlogCard/>
+            <BlogCard/>
+            <BlogCard/>
+          </div>
+        </div>
+      </section>
       <footer className="footer h-[532px] bg-f_sky_blue flex-col py-14">
         <div className="footer-content h-full">
           <div className="container mx-auto">
