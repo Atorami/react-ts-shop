@@ -14,6 +14,7 @@ export default {
         f_pink: '#fb2e86',
         f_red: '#fb2448',
         f_sky_blue: '#f2f0ff',
+        f_sky_dark_blue: '#e6e4f7',
       },
     },
   },
