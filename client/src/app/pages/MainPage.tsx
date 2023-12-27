@@ -104,9 +104,43 @@
         </section>
         <section className="trending-products"></section>
         <section className="discount-block"></section>
-        <section className="discount-item"></section>
+        <section className="discount-item h-[800px] bg-gray-100 bg-opacity-40">
+          <div className="container mx-auto h-full py-24">
+            <h5 className="discount-item__title text-center text-4xl font-josefin font-semibold">Discount Item</h5>
+            <div className="discount-item__block">
+              <div className="discount-item__block__materials pt-8">
+                <ul className="flex flex-row justify-center">
+                  <a href="" className="pr-4 hover:text-f_pink"><li>Wood Chair</li></a>
+                  <a href="" className="pr-4 hover:text-f_pink"><li>Plastic Chair</li></a>
+                  <a href="" className="pr-4 hover:text-f_pink"><li>Sofa Colletion</li></a>
+              </ul>
+              </div>
+              <div className="discount-item__block__info pt-24 flex flex-row">
+                <div className="discount-item__block__info__left flex flex-col justify-center">
+                  <h6 className="discount-item__block__title text-3xl font-semibold text-blue-900">20% Discount Of All Products</h6>
+                  <p className="discount-item__block__subtitle pt-4 text-f_pink font-semibold">Eams Sofa Compact</p>
+                  <p className="discount-item__block__descr pt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget feugiat habitasse nec, bibendum condimentum.</p>
+                  <ul className="discount-item__block__options pt-4 grid grid-cols-2">
+                    <li className="discount-item__block__options_item col-span-1 pt-2">Material expose like metals</li>
+                    <li className="discount-item__block__options_item col-span-1 pt-2">Clear lines and geomatric figures</li>
+                    <li className="discount-item__block__options_item col-span-1 pt-2">Simple neutral colours.</li>
+                    <li className="discount-item__block__options_item col-span-1 pt-2">Material expose like metals</li>
+                  </ul>
+                  <button className="discount-item__block__btn w-[163px] h-[50px] bg-f_pink text-white mt-8">
+                    Shop Now
+                  </button>
+                </div>
+                <div className="discount-item__block__info__right mx-auto ">
+                  <div className="discount-item__block__info__right__circle w-[400px] h-[400px] rounded-full bg-white relative">
+                    <img src={chair} alt="discount-item" className="absolute inset-0 w-full h-full object-cover transform scale-120"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="top-categories">
-          <div className="container mx-auto py-28">
+          <div className="container mx-auto py-24">
             <h5 className="top-categories__title text-center text-4xl font-josefin font-semibold">Top Categories</h5>
             <div className="top-categories__slider relative mt-14 px-16">
               <div className="slider__container flex flex-row justify-between align-middle relative mx-2">
