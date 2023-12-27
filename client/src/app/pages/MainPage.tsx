@@ -2,6 +2,7 @@
 
   import chair from '../../components/assets/img/promo_chair.png';
   import lamp from '../../components/assets/img/promo_lamp.png';
+  import discount_item from "../../components/assets/img/discount/discount_option.png"
   import subscribe_bg from '../../components/assets/img/subscribe_bg.png'
 
   import { ProductCard } from '../../components/ProductCard/ProductCard';
@@ -103,11 +104,10 @@
           </div>
         </section>
         <section className="trending-products"></section>
-        <section className="discount-block"></section>
-        <section className="discount-item h-[800px] bg-gray-100 bg-opacity-40">
-          <div className="container mx-auto h-full py-24">
-            <h5 className="discount-item__title text-center text-4xl font-josefin font-semibold">Discount Item</h5>
-            <div className="discount-item__block">
+        <section className="discount-block h-[1100px]">
+          <div className="container mx-auto h-full pt-24 flex flex-col justify-between">
+            <h5 className="discount-block__title text-center text-4xl font-josefin font-semibold">Actual discounts</h5>
+            <div className="discount-block__items justify-self-end">
               <div className="discount-item__block__materials pt-8">
                 <ul className="flex flex-row justify-center">
                   <a href="" className="pr-4 hover:text-f_pink"><li>Wood Chair</li></a>
@@ -131,10 +131,54 @@
                   </button>
                 </div>
                 <div className="discount-item__block__info__right mx-auto ">
-                  <div className="discount-item__block__info__right__circle w-[400px] h-[400px] rounded-full bg-white relative">
+                  <div className="discount-item__block__info__right__circle w-[400px] h-[400px] rounded-full bg-pink-50 relative">
                     <img src={chair} alt="discount-item" className="absolute inset-0 w-full h-full object-cover transform scale-120"/>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="discount-strip flex flex-row justify-between">
+              <div className="discount-strip__block w-[450px] h-[270px] bg-pink-50 p-8">
+                <h6 className="discount-strip__block__title text-2xl font-semibold text-blue-800 ">23% off in all products</h6>
+                <button className="discount-strip__block__btn text-f_pink font-bold py-2">Shop Now</button>
+                <div className="discount-strip__block__img flex justify-end h-3/4">
+                  <img src={chair} alt=""/>
+                </div>
+
+              </div>
+              <div className="discount-strip__block w-[500px] h-[270px] bg-purple-50 p-8">
+                <h6 className="discount-strip__block__title text-2xl font-semibold text-blue-800 ">23% off in all
+                  products</h6>
+                <button className="discount-strip__block__btn text-f_pink font-bold py-2">Shop Now</button>
+                <div className="discount-strip__block__img flex justify-end h-3/4">
+                  <img src={chair} alt=""/>
+                </div>
+              </div>
+              <div className="discount-strip__block w-[500px] h-[270px]">
+                <ul className="discount-strip__block__options h-full flex flex-col justify-between">
+                  <li className="flex flex-row items-center">
+                    <img src={discount_item} alt=""
+                         className="discount-strip__block__options__item__img bg-gray-100 px-6"/>
+                    <div className="discount-strip__block__options__item__info pl-2">
+                      <p className="options__item__info__title">Executive Seat chair</p>
+                      <p className="options__item__info__price">$32.00</p>
+                    </div>
+                  </li>
+                  <li className="flex flex-row items-center">
+                    <img src={discount_item} alt="" className="discount-strip__block__options__item__img bg-gray-100 px-6"/>
+                    <div className="discount-strip__block__options__item__info pl-2">
+                      <p className="options__item__info__title">Executive Seat chair</p>
+                      <p className="options__item__info__price">$32.00</p>
+                    </div>
+                  </li>
+                  <li className="flex flex-row items-center">
+                    <img src={discount_item} alt="" className="discount-strip__block__options__item__img bg-gray-100 px-6"/>
+                    <div className="discount-strip__block__options__item__info pl-2">
+                      <p className="options__item__info__title">Executive Seat chair</p>
+                      <p className="options__item__info__price">$32.00</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
