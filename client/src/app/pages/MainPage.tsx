@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import chair from '../../components/assets/img/promo_chair.png';
 import lamp from '../../components/assets/img/promo_lamp.png';
+import subscribe_bg from '../../components/assets/img/subscribe_bg.png'
 
 import { ProductCard } from '../../components/ProductCard/ProductCard';
 import {BlogCard} from "../../components/Header/BlogCard/BlogCard";
@@ -16,6 +17,14 @@ interface Products {
 }
 
 export default function MainPage() {
+
+  const subscribeBg = {
+    backgroundImage: `url(${subscribe_bg})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  };
+
   const [productList, setProductList] = useState<Products[]>([]);
 
   useEffect(() => {
@@ -95,10 +104,22 @@ export default function MainPage() {
       <section className="trending-products"></section>
       <section className="discount-block"></section>
       <section className="discount-item"></section>
-      <section className="top-categories"></section>
-      <section className="newslater-subscribe"></section>
-      <section className="parthners"></section>
-      <section className="latest-blog h-[800px]">
+      <section className="top-categories">
+        <div className="container mx-auto">
+          <h5 className="top-categories__title text-center text-4xl font-josefin font-semibold">Top Categories</h5>
+        </div>
+      </section>
+      <section className="newslater-subscribe h-[462px]" style={subscribeBg}>
+        <div className="container mx-auto h-full flex flex-col justify-center">
+          <h5 className="newslatter-subscribe__title text-center font-semibold text-4xl text-blue-900">Get Leatest Update By Subscribe <br/>
+            0ur Newslater</h5>
+          <form action="" className="newslater-subscribe__form mx-auto mt-14">
+            <input className="newslater-subscribe__form__input w-[300px] h-[50px] border-2 p-2" type="text" placeholder="Enter Email Adress"/>
+            <button className="newslater-subscribe__form__btn w-[163px] h-[50px] bg-f_pink text-white">Subscribe</button>
+          </form>
+        </div>
+      </section>
+      <section className="latest-blog h-[800px] py-20">
         <div className="container mx-auto">
           <h2 className="latest-blog__title text-center text-4xl font-josefin font-semibold">Latest Blog</h2>
           <div className="latest-blog__cards flex flex-row justify-between px-36 py-20">
