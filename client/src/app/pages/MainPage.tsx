@@ -138,7 +138,7 @@
               </div>
             </div>
             <div className="discount-strip flex flex-row justify-between">
-              <div className="discount-strip__block w-[450px] h-[270px] bg-pink-50 p-8">
+              <div className="discount-strip__block w-[500px] h-[270px] bg-pink-50 p-8">
                 <h6 className="discount-strip__block__title text-2xl font-semibold text-blue-800 ">23% off in all products</h6>
                 <button className="discount-strip__block__btn text-f_pink font-bold py-2">Shop Now</button>
                 <div className="discount-strip__block__img flex justify-end h-3/4">
@@ -154,7 +154,7 @@
                   <img src={chair} alt=""/>
                 </div>
               </div>
-              <div className="discount-strip__block w-[500px] h-[270px]">
+              <div className="discount-strip__block w-[400px] h-[270px]">
                 <ul className="discount-strip__block__options h-full flex flex-col justify-between">
                   <li className="flex flex-row items-center">
                     <img src={discount_item} alt=""
