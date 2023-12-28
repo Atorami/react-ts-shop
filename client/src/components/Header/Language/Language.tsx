@@ -46,7 +46,7 @@ export const Language = () => {
 
   return (
     <div
-      className="dropdown mx-6 cursor-pointer relative w-10"
+      className="dropdown mx-6 cursor-pointer relative w-10 z-30"
       ref={dropdownRef}
     >
       <div

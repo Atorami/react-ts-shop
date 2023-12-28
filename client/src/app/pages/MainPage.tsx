@@ -85,14 +85,19 @@
               Featured Products
             </h2>
             <div className="featured-products__list mt-12 grid grid-cols-4 grid-rows-1 gap-20 content-center">
-              {productList.map((product) => (
-                <ProductCard
-                  img_path={product.path_img}
-                  title={product.title}
-                  descr={product.descr}
-                  price={product.price}
-                />
-              ))}
+              <ProductCard img_path={chair} title={'New Chair'} descr={"Code - Y523201"} price={'82'}/>
+              <ProductCard img_path={chair} title={'New Chair'} descr={"Code - Y523201"} price={'82'}/>
+              <ProductCard img_path={chair} title={'New Chair'} descr={"Code - Y523201"} price={'82'}/>
+              <ProductCard img_path={chair} title={'New Chair'} descr={"Code - Y523201"} price={'82'}/>
+
+              {/*{productList.map((product) => (*/}
+              {/*  <ProductCard*/}
+              {/*    img_path={product.path_img}*/}
+              {/*    title={product.title}*/}
+              {/*    descr={product.descr}*/}
+              {/*    price={product.price}*/}
+              {/*  />*/}
+              {/*))}*/}
             </div>
           </div>
         </section>
