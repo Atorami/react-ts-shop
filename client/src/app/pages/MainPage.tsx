@@ -46,8 +46,8 @@
 
     return (
       <>
-        <section className="promo bg-f_sky_blue h-[764px] relative">
-          <div className="container mx-auto flex flex-row">
+        <section className="promo bg-f_sky_blue h-[764px]">
+          <div className="container mx-auto flex justify-between">
             <div className="promo__info">
               <p className="pormo__info__subtitle pt-[203px] text-f_pink">
                 Best Furniture For Your Castle....
@@ -66,15 +66,21 @@
                 Shop Now
               </button>
             </div>
-            <div className="promo__img relative mr-[32px]">
-              <img src={chair} alt="" className="promo__img__main  py-[99px]"/>
+            <div className="promo__img">
+              <img src={chair} alt="" className="promo__img__main py-24 pr-20 z-10 relative "/>
+              <div
+                className="promo__img__deformed-circle-2 absolute rounded-full h-[650px] w-[650px] bg-purple-100 z-1 top-40">
+                <div
+                  className="promo__img__deformed-circle-1 absolute rounded-full h-[650px] w-[650px] bg-purple-200 bg-opacity-40 z-1 left-12 bottom-12"/>
+              </div>
+              <div className="promo__discount-circle absolute bg-blue-400 h-[100px] w-[100px] rounded-full text-white font-semibold z-2 top-40 right-96 text-center text-xl flex items-center justify-center"> 50% <br/> off</div>
             </div>
           </div>
           <img src={lamp} alt="" className="promo-lamp absolute top-0"/>
         </section>
 
         <section className="featured-products h-[600px] pt-20 mb-5">
-          <div className="container mx-auto flex flex-col items-center">
+        <div className="container mx-auto flex flex-col items-center">
             <h2 className="featured-products__title text-center text-4xl font-josefin font-semibold">
               Featured Products
             </h2>
